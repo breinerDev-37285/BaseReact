@@ -1,26 +1,29 @@
-import { lazy } from 'react';
-import NotFound from '../pages/NotFound';
+import { Children, lazy } from 'react';
+import {Home, About, Users, NotFound} from '../pages';
 import { IRoute } from './../interfaces/routes';
+import { Routes as LazyRoutes } from '../modules/moduleLazy/router';
 
-const LazyPageOne = lazy(() => import('../modules/moduleLazy/pages/lazy1'))
-const LazyPageTwo = lazy(() => import('../modules/moduleLazy/pages/lazy2'))
-const LazyPageThree = lazy(() => import('../modules/moduleLazy/pages/lazy3'))
-
+const LazyLayout = lazy(() => import('../modules/moduleLazy/layout/LazyLayout'))
 
 export const Routes:IRoute[] = [{
-    name: 'lazyPage1',
-    path: '/lazy1',
-    Component: LazyPageOne
+    name: 'home',
+    path: '/home',
+    component: Home
 },{
-    name: 'lazyPage2',
-    path: '/lazy2',
-    Component: LazyPageTwo
+    name: 'About',
+    path: '/about',
+    component: About
 },{
-    name: 'lazyPage3',
-    path: '/lazy3',
-    Component: LazyPageThree
+    name: 'Users',
+    path: '/users',
+    component: Users
+},{
+    name: 'Lazy',
+    path: '/laziesd',
+    component: LazyLayout,
+    children: LazyRoutes 
 },{
     name: 'notFound',
     path: '*',
-    Component: NotFound
+    component: NotFound
 }]

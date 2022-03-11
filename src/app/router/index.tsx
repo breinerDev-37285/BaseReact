@@ -8,14 +8,29 @@ const MainRouter = () => {
 
     return <Suspense fallback={<LazyLoading/>}>
         <Router>
-            <Navegation/>
+            <Navegation />
             <Routes>
                 {
-                    RoutesConfig.map(({path,Component},i) => <Route 
+                    RoutesConfig.map(({path,component:Component,children},i) => <Route 
                         key={i}
                         path={path} 
                         element={ <Component/> } 
-                    />)
+                    >{
+                        children && <>
+                            {
+                                children.map(({path:childrenPath,component:ChildrenComponent},j) => <Route
+                                    key={j}
+                                    path={childrenPath}
+                                    element={<ChildrenComponent/>}
+                                />)
+                            }
+                            <Route
+                                path={path}
+                                element={ <Navigate to={children[0].path}/>}
+                            />
+                        </>
+
+                    }</Route>)
                 }
                 <Route
                     path='/'
