@@ -1,11 +1,10 @@
 import { lazy } from 'react';
-// import { LazyOne,LazyTwo,LazyThree } from '../modules/moduleLazy/pages'
 import NotFound from '../pages/NotFound';
 import { IRoute } from './../interfaces/routes';
 
-const LazyPageOne = lazy(() => import(/*  */'../modules/moduleLazy/pages/lazy1'))
-const LazyPageTwo = lazy(() => import(/*  */'../modules/moduleLazy/pages/lazy2'))
-const LazyPageThree = lazy(() => import(/*  */'../modules/moduleLazy/pages/lazy3'))
+const LazyPageOne = lazy(() => import('../modules/moduleLazy/pages/lazy1'))
+const LazyPageTwo = lazy(() => import('../modules/moduleLazy/pages/lazy2'))
+const LazyPageThree = lazy(() => import('../modules/moduleLazy/pages/lazy3'))
 
 
 export const Routes:IRoute[] = [{
