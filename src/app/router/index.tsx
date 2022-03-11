@@ -4,16 +4,15 @@ import About from '../pages/About'
 import Home from '../pages/Home'
 import NotFound from '../pages/NotFound'
 import Users from '../pages/Users'
+import { Routes as RoutesConfig } from './routes'
 
 const MainRouter = () => {
+
     return <Router>
         <Navegation/>
-        <Routes>
-            <Route path='/' element={<Home/>} />
-            <Route path='/about' element={<About/>} />
-            <Route path='/users' element={<Users/>} />
-            <Route path='*' element={ <NotFound/>} />
-        </Routes>
+        <Routes>{
+            RoutesConfig.map(({path,Component}) => <Route path={path} element={ <Component/> } />)
+        }</Routes>
     </Router>
 }
 
