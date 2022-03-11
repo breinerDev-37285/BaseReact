@@ -6,7 +6,7 @@ import { IRoute } from './../interfaces/routes';
 
 export const Routes:IRoute[] = [{
     name: 'lazyPage1',
-    path: '/lazy',
+    path: '/lazy1',
     Component: LazyOne
 },{
     name: 'lazyPage2',

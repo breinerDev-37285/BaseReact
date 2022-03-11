@@ -6,9 +6,9 @@ const Navegation = () => {
     return <nav>
         <img src={ logo } alt="React Logo" />
         <ul>{
-            RoutesConfig.map(({name, path}) => {
+            RoutesConfig.map(({name, path},i) => {
                 if(name === 'notFound') return 
-                return <li>
+                return <li key={i}>
                     <NavLink 
                         to={path} 
                         className={({isActive}) => `${isActive && 'nav-active'}`}
