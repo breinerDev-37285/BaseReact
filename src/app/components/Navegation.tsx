@@ -1,8 +1,8 @@
 import { NavLink } from 'react-router-dom'
-import logo from '../../assets/logo.svg'
-import { Routes as RoutesConfig } from '../nav/../../router/routes'
+import logo from '../assets/logo.svg'
+import { Routes as RoutesConfig } from '../router/routes'
 
-const Navegation = () => {
+const Navigation = () => {
     return <nav>
         <img src={ logo } alt="React Logo" />
         <ul>{
@@ -20,4 +20,4 @@ const Navegation = () => {
     </nav>
 }
 
-export default Navegation
+export default Navigation
