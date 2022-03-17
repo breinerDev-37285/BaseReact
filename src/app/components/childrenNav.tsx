@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom'
 const ChildrenNavigation = ({Routes}:{Routes:IRoute[]}) => {
 
     return <div>
-        <ul>{
+        <ul >{
             Routes.map(({name,path},i) => <Link 
                 key={i}    
                 to={path}

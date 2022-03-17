@@ -1,5 +1,9 @@
-import { BasicFormik } from './../pages/basicFormik';
-import { RegisterForm } from './../pages/registerForm';
+import { FormikAbstract,
+    FormikComponents,
+    FormikYup,
+    BasicFormik,
+    RegisterForm 
+} from '@modules/forms/pages';
 import { IRoute } from '@interfaces/routes';
 
 
@@ -11,4 +15,16 @@ export const Routes:IRoute[] = [{
     name: 'Basic Formik',
     path: 'formik',
     component: BasicFormik
+},{
+    name: 'Formik Yup',
+    path: 'formikyup',
+    component: FormikYup
+},{
+    name: 'Formik Components',
+    path: 'formikcomponents',
+    component: FormikComponents
+},{
+    name: 'Formik Abstract',
+    path: 'formikabstract',
+    component: FormikAbstract
 }]

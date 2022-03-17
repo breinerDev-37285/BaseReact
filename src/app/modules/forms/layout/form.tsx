@@ -3,10 +3,10 @@ import { Routes } from '@modules/forms/router'
 import { Outlet } from 'react-router-dom'
 
 const Forms = () => {
-    return <>
+    return <div className="children-layout">
         <ChildrenNavigation Routes={ Routes }/>
         <Outlet/>
-    </>
+    </div>
 }
 
 

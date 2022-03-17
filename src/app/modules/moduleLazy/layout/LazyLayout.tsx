@@ -3,10 +3,10 @@ import { Outlet } from 'react-router-dom'
 import {Routes} from '@modules/moduleLazy/router'
 
 const LazyLayout = () => {
-    return <>
+    return  <div className="children-layout">
         <ChildrenNavigation Routes={ Routes }/>
         <Outlet/>
-    </>
+    </div>
 }
 
 export default LazyLayout

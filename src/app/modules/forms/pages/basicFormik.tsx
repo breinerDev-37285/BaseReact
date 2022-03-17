@@ -48,7 +48,7 @@ export const BasicFormik = () => {
         <h1>BasicFormik</h1>
 
         <form noValidate onSubmit={ handleSubmit }>
-            <div>
+            <>
                 <input 
                     type="text" 
                     placeholder='firstname'
@@ -58,9 +58,9 @@ export const BasicFormik = () => {
                     onBlur={ handleBlur }
                 />  
                 { errors.fistName && <span>{ errors.fistName }</span>}
-            </div>
+            </>
 
-            <div>
+            <>
                 <input 
                     type="text" 
                     placeholder='lastname'
@@ -71,9 +71,9 @@ export const BasicFormik = () => {
                 />  
 
                 { errors.lastName && <span>{ errors.lastName }</span>}
-            </div>
+            </>
 
-            <div>
+            <>
                 <input 
                     type="email" 
                     placeholder='example@email.com'
@@ -83,7 +83,7 @@ export const BasicFormik = () => {
                     onBlur={ handleBlur }
                 />  
                 { errors.email && <span>{errors.email}</span>}
-            </div>
+            </>
 
             <button type="submit">Submit</button>
         </form>
