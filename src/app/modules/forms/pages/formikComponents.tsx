@@ -37,43 +37,40 @@ export const FormikComponents = () => {
             onSubmit={ val => console.log(val)}
             validationSchema={ yupValSchema }
         >
-            {  formik => (
-                <Form>
-                    <Field type='text'name='fistName' />
-                    <ErrorMessage name='fistName' component='span'/>
+            <Form>
+                <Field type='text'name='fistName' />
+                <ErrorMessage name='fistName' component='span'/>
 
-                    <Field type='text' name='lastName'/>
-                    <ErrorMessage name='lastName' component='span'/>
+                <Field type='text' name='lastName'/>
+                <ErrorMessage name='lastName' component='span'/>
 
-                    <Field type='text' name='email'/>
-                    <ErrorMessage name='email' component='span'/>
+                <Field type='text' name='email'/>
+                <ErrorMessage name='email' component='span'/>
 
-                
-                    <label htmlFor='jobType'>Job Type</label>
-                    <Field 
-                        id='jobType' 
-                        name='jobType' 
-                        as='select' 
-                    >
-                        <option value="">Select One</option>
-                        <option value="developer">Developer</option>
-                        <option value="designer">Designer</option>
-                        <option value="it-sr">IT SR</option>
-                        <option value="it-jr">IT JR</option>    
-                    </Field>
-                    <ErrorMessage name='jobType' component='span'/>
-                        
-                    <br />
-                    <label>
-                        <Field name='terms' type='checkbox' />
-                        Terms and Conditions
-                    </label>
-                    <ErrorMessage name='terms' component='span'/>
+            
+                <label htmlFor='jobType'>Job Type</label>
+                <Field 
+                    id='jobType' 
+                    name='jobType' 
+                    as='select' 
+                >
+                    <option value="">Select One</option>
+                    <option value="developer">Developer</option>
+                    <option value="designer">Designer</option>
+                    <option value="it-sr">IT SR</option>
+                    <option value="it-jr">IT JR</option>    
+                </Field>
+                <ErrorMessage name='jobType' component='span'/>
+                    
+                <br />
+                <label>
+                    <Field name='terms' type='checkbox' />
+                    Terms and Conditions
+                </label>
+                <ErrorMessage name='terms' component='span'/>
 
-                    <button type="submit">Submit</button>
-                </Form>
-            )}
-
+                <button type="submit">Submit</button>
+            </Form>
         </Formik>
     </div>
 }

@@ -1,0 +1,51 @@
+[{
+    "type": "text",
+    "name": "firstName",
+    "label": "First Name",
+    "value": "",
+    "placeholder": "enter your name",
+    "validations": {
+        "required": true,
+        "maxLength": 15
+    }
+},{
+    "type": "text",
+    "name": "lastName",
+    "label": "Last Name",
+    "value": "",
+    "placeholder": "enter your last name",
+    "validations": {
+        "required": true,
+        "minLenght": 15
+    }
+},{
+    "type": "email",
+    "name": "email",
+    "label": "Email",
+    "value": "",
+    "placeholder": "example@mail.com",
+    "validations": {
+        "email": true,
+        "required": true
+    }
+},{
+    "type": "select",
+    "name": "favorityGame",
+    "label": "Favorite Game",
+    "options": [{
+        "id": "rev",
+        "name": "Resident Evil"
+    },{
+        "id": "cod",
+        "name": "Call of duty"
+    },{
+        "id": "bat",
+        "name": "Battlefield"
+    },{
+        "id": "pes",
+        "name": "pro evolution soccer"
+    }],
+    "validations": {
+        "required": true
+    }
+}]

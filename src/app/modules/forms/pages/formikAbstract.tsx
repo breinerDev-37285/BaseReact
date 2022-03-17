@@ -58,7 +58,7 @@ export const FormikAbstract = () => {
                         placeholder='example@mail.com'
                         type='email'
                     />
-                   
+                    
                     <InputSelect 
                         id='jobType'
                         name='jobType'
@@ -73,12 +73,13 @@ export const FormikAbstract = () => {
                     </InputSelect>
                         
                     <br />
-                   
+                    
                     <InputCheckbox label='Terms & Conditions' name='terms' />
+
                     <button type="submit">Submit</button>
+                    <button type="button" onClick={formik.handleReset} >Reset</button>
                 </Form>
             )}
-
         </Formik>
     </div>
 }

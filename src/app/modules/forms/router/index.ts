@@ -2,7 +2,8 @@ import { FormikAbstract,
     FormikComponents,
     FormikYup,
     BasicFormik,
-    RegisterForm 
+    RegisterForm,
+    DynamicForm 
 } from '@modules/forms/pages';
 import { IRoute } from '@interfaces/routes';
 
@@ -27,4 +28,8 @@ export const Routes:IRoute[] = [{
     name: 'Formik Abstract',
     path: 'formikabstract',
     component: FormikAbstract
+},{ 
+    name: 'Dinamic Form',
+    path: 'dinamic',
+    component: DynamicForm
 }]
