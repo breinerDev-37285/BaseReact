@@ -47,7 +47,42 @@ nav li a {
   text-decoration: none;
 }
 
+nav > li + a {
+  margin-right: 1em;
+}
+
 .nav-active {
   color: grey;
   transition: all .3s ease-out;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    width: 400px;
+}
+
+input, .select {
+    margin-top: 5px;
+    outline: none;
+    padding: 10px;
+}
+
+.title {
+    color: red
+}
+
+button {
+    margin-top: 20px;
+    padding: 10px;
+}
+
+span, .error-message {
+  display: block;
+  color: red;
+  padding: .2em 0;
+}
+
+.has-error {
+    border: 1px solid red;
 }

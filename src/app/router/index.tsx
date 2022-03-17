@@ -1,7 +1,7 @@
 import { Suspense } from 'react'
 import { BrowserRouter as Router, Routes, Route,Navigate } from 'react-router-dom'
-import LazyLoading from '../components/lazyloading'
-import Navegation from '../components/Navegation'
+import LazyLoading from '@components/lazyloading'
+import Navegation from '@components/Navegation'
 import { Routes as RoutesConfig } from './routes'
 
 const MainRouter = () => {

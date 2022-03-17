@@ -1,9 +1,10 @@
+import ChildrenNavigation from '@components/childrenNav'
 import { Outlet } from 'react-router-dom'
-import LazyNavigation from "../components/nav"
+import {Routes} from '@modules/moduleLazy/router'
 
 const LazyLayout = () => {
     return <>
-        <LazyNavigation/>
+        <ChildrenNavigation Routes={ Routes }/>
         <Outlet/>
     </>
 }

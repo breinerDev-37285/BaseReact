@@ -1,6 +1,6 @@
 import { NavLink } from 'react-router-dom'
-import logo from '../assets/logo.svg'
-import { Routes as RoutesConfig } from '../router/routes'
+import logo from '@assets/logo.svg'
+import { Routes as RoutesConfig } from '@router/routes'
 
 const Navigation = () => {
     return <nav>
